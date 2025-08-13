@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título de la página (aparece en Google y pestañas del navegador) -->
+    <title>Artiel Studio | Web Design & Development</title>
+
+    <!-- Meta descripción (importante para SEO y aparece en resultados de Google) -->
+    <meta name="description"
+        content="Bienvenido a mi sitio web. Aquí encontrarás información sobre mis servicios, proyectos y cómo contactarme. ¡Visítanos ahora!">
+
+    <!-- Palabras clave (ya no son tan importantes, pero no hacen daño) -->
+    <meta name="keywords" content="sitio web, portfolio, servicios, desarrollo web, diseño, contacto">
+
+    <!-- Autor del sitio -->
+    <meta name="author" content="Tu Nombre o Marca">
+
+    <!-- Robots (permite a Google indexar la página) -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph para compartir en redes sociales -->
+    <meta property="og:title" content="Mi Sitio Web Profesional">
+    <meta property="og:description"
+        content="Descubre mis proyectos y servicios. Desarrollo web profesional a tu alcance.">
+    <meta property="og:image" content="https://tudominio.com/imagen.jpg">
+    <meta property="og:url" content="https://tudominio.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mi Sitio Web Profesional">
+    <meta name="twitter:description" content="Descubre mis servicios como desarrollador web.">
+    <meta name="twitter:image" content="https://tudominio.com/imagen.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon-artiel-studio.svg" type="image/svg+xml">
+
+    <!--  external -->
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/p5.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.7/lib/addons/p5.sound.min.js"></script>
+
+    <!-- Enlace al CSS -->
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="./normalize.css">
+</head>
+
+<body>
+
+    <img src="./assets/footer-artiel.svg" class="logo-responsive" alt="Artiel Studio Logo" />
+    <header>
+        <nav class="nav-artiel">
+            <a href="#">
+                <img src="./assets/footer-artiel.svg" style="padding: 10px; width: 100px;" class="logo"
+                    alt="Artiel Studio Logo" />
+            </a>
+
+            <ul class="nav-ul">
+                <li><a href="#about">about/</a></li>
+                <li><a href="#works">works/</a></li>
+                <li><a href="#services">services/</a></li>
+                <li> <a href="mailto:artielsoraya@gmail.com">contact/</a>
+                </li>
+            </ul>
+
+
+        </nav>
+
+        <nav class="nav-artiel-responsive">
+            <div class="container-menu-responsive">
+
+
+                <button class="menu-button" id="menu-button">
+                    <span>menu</span>
+                </button>
+
+                <div class="menu-responsive">
+                    <ul>
+                        <li><a style="color: white;" href="#about">about</a></li>
+                        <li><a style="color: white;" href="#worksLink">works</a></li>
+                        <li><a style="color: white;" href="#services">services</a></li>
+                        <li><a style="color: white;" href="mailto:artielsoraya@gmail.com">contact</a></li>
+                        <li><a style="color: white;" href="cv-soraya-artiel-2025.pdf" download>download CV</a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+    </header>
+
+    <canvas id="grain"></canvas>
+
+
+    <main>
+
+
+        <section id="home">
+
+
+            <div class="home-container">
+                <!-- <spline-viewer url="https://prod.spline.design/w0RyUVnTShfoii4M/scene.splinecode"></spline-viewer> -->
+                <div class="home-container-text">
+                    <div class="home-container-span">
+                        <h3> <span>Create websites that<br> stick in people's minds.
+                        </h3>
+                    </div>
+
+                    <div style="min-height: 50vh;" class="container-home-h1">
+                        <div class="container-activities">
+                            <div>
+                                <h3>Web Designer</h3>
+                            </div>
+
+
+                            <div>
+                                <h3 style="text-align: center;">Web Developer</h3>
+                            </div>
+                            <div style="text-align: end;">
+                                <h3>Digital Designer</h3>
+                            </div>
+
+                        </div>
+
+                        <div style="position: relative;">
+                            <div class="firma">
+                                <svg width="413" height="197" viewBox="0 0 413 197" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M33.0673 99.6113C10.6273 124.691 -2.91265 138.931 2.00735 138.951C25.3476 139.046 45.6873 130.271 53.0173 132.261C55.9307 133.052 56.3873 135.571 54.7473 140.881C50.3279 155.191 38.4674 172.191 25.8274 187.831C19.9872 195.058 14.5073 200.171 19.7073 189.691C38.5796 151.656 61.6874 119.671 69.6774 110.011C72.8766 106.143 75.0273 104.971 76.0473 105.611C85.6071 111.61 69.7874 142.131 68.3874 154.261C66.3655 171.779 104.347 115.051 110.387 95.3413C111.492 91.735 111.067 89.6513 109.087 89.2913C87.3138 85.3325 69.7474 119.591 69.0674 122.261C68.2578 125.44 92.2273 109.071 118.227 94.3613C126.15 89.8791 127.067 100.771 126.077 107.831C125.087 114.891 123.107 120.171 122.747 121.571C117.189 143.188 146.387 65.6313 148.717 64.2813C157.58 59.1461 148.427 88.8513 140.427 109.541C138.887 113.526 139.067 115.571 140.387 115.271C158.465 111.163 170.347 75.7113 174.057 69.2913C175.968 65.9858 163.907 89.9313 162.787 94.1513C160.881 101.334 178.367 68.3913 183.367 53.7013C186.988 43.0625 183.067 79.5713 186.367 81.9413C211.081 99.6902 214.387 39.0113 214.737 32.3113C214.788 31.3375 210.467 38.8113 199.857 68.6113C189.247 98.4113 171.427 151.211 162.577 176.761C153.727 202.311 154.387 199.011 162.977 179.491C171.567 159.971 188.067 124.331 201.847 97.3913C215.627 70.4513 226.187 53.2913 235.587 39.5013C252.116 15.2528 263.047 3.63133 266.047 1.62133C275.974 -5.02947 255.127 43.4713 248.437 63.1513C246.549 68.7072 252.307 66.3313 257.327 62.3313C280.412 43.9376 285.727 20.9913 284.747 14.9813C284.401 12.8595 279.147 15.5713 265.557 25.8313C251.967 36.0913 228.867 54.5713 189.247 80.2613C149.627 105.951 94.1873 138.291 63.3173 156.931C32.4473 175.571 27.8274 179.531 31.0574 180.911C34.2874 182.291 45.5074 180.971 74.3874 168.741C103.267 156.511 149.467 133.411 183.497 114.911C217.527 96.4113 237.987 83.2113 263.377 68.8213C288.767 54.4313 318.467 39.2513 340.697 29.1213C362.927 18.9913 376.787 14.3713 387.557 11.3313C398.327 8.29133 405.587 6.97133 411.067 7.61133"
+                                        stroke="white" stroke-width="2" stroke-linecap="round" class="svg-elem-1">
+                                    </path>
+                                </svg>
+
+                            </div>
+
+
+                            <img src="./assets/footer-artiel.svg" id="artiel-logo" class="enter-artiel-logo"
+                                style="width: 100%; margin-top: 20px; margin-bottom: 20px;" alt="Artiel Studio Logo" />
+                        </div>
+                        <div class="container-activities">
+                            <div>
+                                <h3>Creative</h3>
+                            </div>
+
+
+                            <div>
+                                <h3 style="text-align: center;">Innovative</h3>
+                            </div>
+                            <div style="text-align: end;">
+                                <h3>Dynamic</h3>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+        <section id="about">
+            <div class="about-container">
+
+                <div class="about-container-layout">
+                    <div class="link-responsive">
+
+                        <h3>(ABOUT ME)</h3>
+                    </div>
+
+                    <div class="home-container-image">
+                        <div class="home-designer-container">
+
+                            <div class="home-designer-description">
+                                <h2>
+                                    I'm a web designer and developer helping brands build websites and apps that look
+                                    great, work
+                                    fast, and connect with people.
+                                </h2>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="home-designer-image">
+                                <div class="hidden-image reveal">
+                                    <img src="./assets/soraya-artiel-designer.png" />
+                                </div>
+                            </div>
+                            <div class="home-container-text-description">
+                                <span>Design, code, and interaction drive my <br>creative approach to web and app
+                                    design.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="works">
+            <div>
+                <div class="project-title" id="worksLink">
+                    <h3 style="color: rgb(255, 255, 255);">(WORKS)</h3>
+                    <div style="display: flex; flex-direction: row; justify-content: space-between;">
+                        <h2>I make sure your website and app look great and feels easy to use.</h2>
+                    </div>
+
+                    <div class="container-latest-projects">
+                        <div class="latest-projects">
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/live-extreme-1.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Live extreme</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design & Development</span>
+                                </div>
+                            </div>
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/live-extreme-2.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Live extreme</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design & Development</span>
+                                </div>
+                            </div>
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/live-extreme-3.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Live extreme</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design & Development</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="latest-projects">
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/reunio-1.jpg">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Reunio</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design & Development</span>
+                                </div>
+                            </div>
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/reunio-2.jpg">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Reunio</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design & Development</span>
+                                </div>
+                            </div>
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/reunio-3.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Reunio</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design & Development</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="latest-projects">
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/black-horocsope-1.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Black Horoscope</h5>
+                                    <span style="color: gray; font-size: 1rem;">- App Design & Development</span>
+                                </div>
+                            </div>
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/black-horoscope-2.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Black Horoscope</h5>
+                                    <span style="color: gray; font-size: 1rem;">- App Design & Development</span>
+                                </div>
+                            </div>
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/black-horoscope-3.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Black Horoscope</h5>
+                                    <span style="color: gray; font-size: 1rem;">- App Design & Development</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="latest-projects">
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/valor-hunter-3.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Valor Hunter</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design</span>
+                                </div>
+                            </div>
+
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/valor-hunter-1.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Valor Hunter</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design</span>
+                                </div>
+                            </div>
+
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/valor-hunter-2.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Valor Hunter</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="latest-projects">
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/beyond-business-1.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Business Beyond</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design & Development</span>
+                                </div>
+                            </div>
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/beyond-business-2.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Business Beyond</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design & Development</span>
+                                </div>
+                            </div>
+                            <div class="project-container">
+                                <img src="./assets/projects-pictures/beyond-business-3.png">
+                                <div
+                                    style="display: flex; align-items: center; gap: 0.5rem; margin-top: 1rem; margin-bottom: 0.5rem;">
+                                    <h5 style="color: white; font-size: 1rem; margin: 0;">Business Beyond</h5>
+                                    <span style="color: gray; font-size: 1rem;">- Web Design & Development</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-blend">
+            <div class="footer-container">
+
+                <div class="menu-footer-block">
+                    <h3>MENU</h3>
+                    <ul class="menu-footer-block-links">
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#services">services</a></li>
+                        <li><a href="#works">works</a></li>
+                        <li><a href="#works">archive</a></li>
+
+                    </ul>
+                </div>
+                <div class="menu-footer-block">
+                    <h3>SOCIAL</h3>
+                    <span>
+                        <ul>
+                            <li>
+                                <a href="https://www.linkedin.com/in/soraya-artiel-a59384200/" target="_blank"
+                                    rel="noopener noreferrer">
+                                    Linkedin
+
+                                </a>
+                            </li>
+                            <li><a href=" https://github.com/ArtielSry" target="_blank" rel="noopener noreferrer">
+                                    GitHub
+
+                                </a>
+                            </li>
+                        </ul>
+                    </span>
+                </div>
+                <div class="menu-footer-block">
+                    <h3>LOCAL TIME</h3>
+                    <P>
+                        MADRID, <span id="time-madrid"></span>
+                    </P>
+                </div>
+                <div class="menu-footer-block">
+                    <h3>CONTACT</h3>
+                    <P>
+                        <a href="mailto:artielsoraya@gmail.com">artielsoraya@gmail.com</a>
+                    </P>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <img src="./assets/footer-artiel.svg" style="width: 100%; margin-top: 20px; margin-bottom: 20px;"
+                alt="Artiel Studio Logo" />
+
+
+
+        </div>
+        </div>
+    </footer>
+
+    <!--
+    <div id="textContainer"></div>-->
+
+
+    <!-- JavaScript -->
+
+    <script>
+        const canvas = document.getElementById('grain');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        function drawGrain() {
+            let imageData = ctx.createImageData(canvas.width, canvas.height);
+            for (let i = 0; i < imageData.data.length; i += 4) {
+                let val = Math.random() * 255;
+                imageData.data[i] = val;
+                imageData.data[i + 1] = val;
+                imageData.data[i + 2] = val;
+                imageData.data[i + 3] = 15;
+            }
+            ctx.putImageData(imageData, 0, 0);
+            requestAnimationFrame(drawGrain);
+        }
+
+        drawGrain();
+    </script>
+
+    <!-- time hour local-->
+    <script>
+        function displayTime() {
+            const now = new Date();
+            const option = {
+                timeZone: 'Europe/Madrid',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: true
+            };
+            const horaMadrid = now.toLocaleTimeString('en-US', option);
+            document.getElementById("time-madrid").textContent = horaMadrid;
+        }
+
+        displayTime();
+        setInterval(displayTime, 1000);
+    </script>
+
+    <!-- hover effect
+     
+
+<script type="module" src="./js/hover.js"></script> -->
+
+    <!-- menu responsive -->
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const menuResponsive = document.querySelector('.menu-responsive');
+        const menuList = menuResponsive.querySelector('ul');
+        const sections = document.querySelectorAll('section');
+        const body = document.body;
+        const footer = document.querySelector('footer');
+
+        // Abrir / cerrar con botón
+        menuButton.addEventListener('click', () => {
+            if (!menuResponsive.classList.contains('show')) {
+                menuResponsive.classList.add('show');
+            } else {
+                menuResponsive.classList.remove('show');
+            }
+            menuButton.classList.toggle('rotate');
+            sections.forEach(section => {
+                section.classList.toggle('scale');
+            });
+            body.classList.toggle('noscroll');
+            footer.classList.toggle('scale');
+        });
+
+        // Cerrar si se hace clic fuera del UL
+        document.addEventListener('click', (event) => {
+            const clickDentroUL = menuList.contains(event.target);
+            const clickEnBoton = menuButton.contains(event.target);
+
+            if (!clickDentroUL && !clickEnBoton && menuResponsive.classList.contains('show')) {
+                cerrarMenu();
+            }
+        });
+
+        // Cerrar si se hace clic en cualquier enlace del menú
+        menuList.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                cerrarMenu();
+            });
+        });
+
+        // Función para cerrar el menú
+        function cerrarMenu() {
+            menuResponsive.classList.remove('show');
+            menuButton.classList.remove('rotate');
+            sections.forEach(section => {
+                section.classList.remove('scale');
+            });
+            body.classList.remove('noscroll');
+            footer.classList.remove('scale');
+        }
+    </script>
+
+
+    <!-- overflow hidden -->
+    <script>
+        const overlay = document.querySelector('.clipPathReveal');
+        overlay.addEventListener('animationend', () => {
+            document.body.style.overflow = 'auto';
+        });
+    </script>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const svg = document.querySelector('.firma svg');
+            svg.classList.add('active');
+        });
+    </script>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+</body>
+
+</html>
